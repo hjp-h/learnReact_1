@@ -5,7 +5,7 @@ import { Link, Outlet, useOutlet, useResolvedPath } from 'react-router-dom'
 import store from '../redux/store'
 // action
 // import {setBannerAction,setRecommendAction } from '../redux/actions/info'
-import {setInfoAction } from '../redux/actions/info'
+import {setInfoAction,fetchInfoAction } from '../redux/actions/info'
 export default function Home() {
 	console.log('##', useOutlet())
 	console.log('@@', useResolvedPath('/user?id=001&name=tom#qwe'))
@@ -21,8 +21,12 @@ export default function Home() {
   //   })
   // },[])
 
-	// 方式二 将请求放在acction中 让借给redux管理
-	store.dispatch(setInfoAction);
+	useEffect(() => {
+			// 方式二 将请求放在acction中 让借给redux管理
+			store.dispatch(setInfoAction);
+			// 方式三 redux-saga调用
+			store.dispatch(fetchInfoAction)
+	},[])
 	return (
 		<div>
 			<h3>我是Home的内容</h3>

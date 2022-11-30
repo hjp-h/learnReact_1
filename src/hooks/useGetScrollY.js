@@ -5,11 +5,11 @@ export const useGetScrollY = (el) => {
   const handleScroll = (e) => {
     setScrollY(e.target.scrollTop);
   }
-  useEffect(() => {
+  useEffect(() => { 
     el.addEventListener('scroll', handleScroll)
     return () => {
       el.removeEventListener('scroll',handleScroll)
     }
-  }, [])
+  },[])
   return [scrollY]
 }

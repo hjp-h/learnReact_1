@@ -1,5 +1,15 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState,useEffect,memo } from 'react'
 import { nanoid } from 'nanoid'
+const Test = memo(function (){
+  console.log(111)
+  useEffect(() => {
+    console.log("render test")
+  }, [])
+  
+  return (
+    <div>test</div>
+    )
+})
 export default function UseStateHook() {
   const [count, setCount] = useState(0)
   const [students, setStudents] = useState([{ id: nanoid(), name: 'zhangsan', age: 18 }])
@@ -14,6 +24,7 @@ export default function UseStateHook() {
       <h3>UseStateHook</h3>
       <p>当前计数：{count}</p>
       <button onClick={() => setCount(count + 1)}>点我+1</button>
+      <Test/>
       <p>当前学生：<button onClick={addStu}>添加学生</button></p>
       <ul>
         {

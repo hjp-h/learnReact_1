@@ -8,6 +8,7 @@ import UseMemoHook from '../components/UseMemoHook'
 import UseRefHook from '../components/UseRefHook'
 import UseImperativeHandleHook from '../components/UseImperativeHandleHook'
 import UseGetScrollYHook from '../components/UseGetScrollYHook'
+import UseTransitionHook from '../components/UseTransitionHook'
 export default function Hook() {
   return (
     <Fragment>
@@ -30,6 +31,8 @@ export default function Hook() {
       <UseRefHook />
       <hr />
       <UseImperativeHandleHook />
+      <hr />
+      <UseTransitionHook/>
     </Fragment>
   )
 }

@@ -1,0 +1,88 @@
+.hjp-appear,.hjp-enter{
+  opacity: 0;
+}
+.hjp-appear-active,.hjp-enter-active{
+  opacity: 1;
+  transform: translateX(5);
+  transform: scale(0.9);
+  transition: all 2s ease;
+}
+.hjp-enter-done{
+  opacity: 1;
+  transform: scale(0.9);
+  transform: translateX(0);
+  transition: all 2s ease;
+}
+.hjp-exit{
+  opacity: 1;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: all 2s ease;
+}
+.hjp-exit-active{
+  opacity: 0;
+  transform: translateX(5);
+  transform: rotate(180deg);
+  transform-origin: left;
+  transition: all 2s;
+}
+/* switchTransiton */
+.switch-text{
+  width: 100px;
+  height: 25px;
+  color: white;
+  background-color: rgb(10, 124, 245);
+  text-align: center;
+  line-height: 25px;
+}
+.fade-enter{
+  opacity: 0;
+  transform: translateX(150px);
+}
+.fade-enter-active{
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 2s ease;
+}
+.fade-exit{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: all 2s ease;
+}
+/* TransitionGroup */
+.primary-btn{
+  border: none;
+  background-color: rgb(10, 124, 245);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color:white;
+}
+ul{
+  list-style: none;
+}
+ul li{
+  margin-top: 5px;
+  width:300px;
+  display: flex;
+  justify-content: space-between;
+}
+.book-enter{
+  opacity: 0;
+  transform: translateX(150px);
+}
+.book-enter-active{
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 1s ease;
+}
+.book-exit{
+  opacity: 1;
+}
+.book-exit-active{
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: all 1s ease;
+}

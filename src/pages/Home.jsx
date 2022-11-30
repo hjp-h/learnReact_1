@@ -1,5 +1,5 @@
 // react api
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link, Outlet, useOutlet, useResolvedPath } from 'react-router-dom'
 // store
 import store from '../redux/store'
@@ -20,18 +20,18 @@ export default function Home() {
 	// 		store.dispatch(setRecommendAction(recommend))
   //   })
   // },[])
-
-	useEffect(() => {
-			// 方式二 将请求放在acction中 让借给redux管理
-			store.dispatch(setInfoAction);
-			// 方式三 redux-saga调用
-			store.dispatch(fetchInfoAction)
-	},[])
+	const handleDispatch = () => {
+		// 方式二 将请求放在acction中 让借给redux管理
+		store.dispatch(setInfoAction);
+		// 方式三 redux-saga调用
+		store.dispatch(fetchInfoAction)
+	}
 	return (
 		<div>
 			<h3>我是Home的内容</h3>
+			<button onClick={handleDispatch}>点我发送网络请求,并将数据存入redux</button>
+			&nbsp;&nbsp;&nbsp;
 			<Link to="message">消息页</Link>
-
 			<hr />
 			<Outlet/>
 		</div>

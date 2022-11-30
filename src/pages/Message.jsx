@@ -24,13 +24,13 @@ export default function Message() {
       <ul>
         {messages.map(msg => (
           <li key={msg.id}>
-            {/* params方式传参 */}
+            {/* params方式传参 useParams */}
             {/* <Link to={ `detail/${msg.id}/${msg.content}/${msg.title}` }>{msg.title}</Link> */}
 
-            {/* search方式 */}
+            {/* search方式  useSearchParams */}
             {/* <Link to={ `detail?id=${msg.id}&content=${msg.content}&title=${msg.title}` }>{msg.title}</Link> */}
 
-            {/* state方式 */}
+            {/* state方式 useLocation */}
             <Link to="detail" state={{ ...msg }}>{msg.title}</Link>
             <a onClick={() => showDetail(msg)}>查看详情</a>
           </li>

@@ -32,7 +32,7 @@ export default mySaga
 
 
 
-// 实现原理 (生产器调用之后就是一个迭代器 调用它的next方法才会执行 每次next都是依次执行yield之前的代码)
+// 实现原理 (生成器调用之后就是一个迭代器 调用它的next方法才会执行 每次next都是依次执行yield之前的代码)
 function* getResult() {
   const result = yield new Promise(resolve => {
     setTimeout(() => {

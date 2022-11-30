@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, useRoutes } from 'react-router-dom'
+import { NavLink, useRoutes} from 'react-router-dom'
 import routes from './router'
 
 export default function App() {
@@ -19,6 +19,8 @@ export default function App() {
 						<NavLink className="list-group-item" to="/home">Home</NavLink>
 						<NavLink className="list-group-item" to="/store">Redux</NavLink>
 						<NavLink className="list-group-item" to="/hook">Hook</NavLink>
+						<NavLink className="list-group-item" to="/router">Router</NavLink>
+						<NavLink className="list-group-item" to="/animation">Animation</NavLink>
 					</div>
 				</div>
 				<div className="col-xs-6">

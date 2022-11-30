@@ -1,0 +1,8 @@
+.my-music-active{
+  background-color: #56a4f1;
+}
+.my-nav{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}

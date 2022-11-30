@@ -7,7 +7,8 @@ import { StoreContext } from '../utils/redux/context'
 // axios
 // cpt
 import Person from '../containers/person'
-import Counter from '../containers/counter'
+// import Counter from '../containers/counter'
+import Counter from '../containers/counterHooks'
 import CustomeCounter from '../containers/customCounter'
 import Info from '../containers/info'
 export default function Store() {
